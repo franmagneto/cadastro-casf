@@ -4,6 +4,7 @@
   "description": "Cadastro de acolhidos na Casa de Apoio São Francisco",
   "main": "main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/franmagneto/cadastro-casf/issues"
   },
-  "homepage": "https://github.com/franmagneto/cadastro-casf#readme"
+  "homepage": "https://github.com/franmagneto/cadastro-casf#readme",
+  "dependencies": {
+    "sqlite3": "^4.0.0"
+  },
+  "devDependencies": {
+    "electron": "^2.0.0-beta.7"
+  }
 }
