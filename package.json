@@ -1,0 +1,19 @@
+{
+  "name": "cadastro-casf",
+  "version": "1.0.0",
+  "description": "Cadastro de acolhidos na Casa de Apoio São Francisco",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franmagneto/cadastro-casf.git"
+  },
+  "author": "Francisco Machado Magalhães Neto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/franmagneto/cadastro-casf/issues"
+  },
+  "homepage": "https://github.com/franmagneto/cadastro-casf#readme"
+}
