@@ -6,13 +6,15 @@ const url = require('url')
 let mainWindow
 
 function createWindow() {
-  mainWindow = new BrowserWindow()
+  mainWindow = new BrowserWindow({ show: false })
 
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
   }))
+
+  mainWindow.once('ready-to-show', mainWindow.show)
 
   mainWindow.on('closed', () => {
     mainWindow = null
