@@ -2,7 +2,7 @@
   "name": "cadastro-casf",
   "version": "1.0.0",
   "description": "Cadastro de acolhidos na Casa de Apoio São Francisco",
-  "main": "src/main.js",
+  "main": "app/main.js",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
