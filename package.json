@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/franmagneto/cadastro-casf#readme",
   "dependencies": {
+    "knex": "^0.14.6",
     "sqlite3": "^4.0.0"
   },
   "devDependencies": {
