@@ -20,10 +20,10 @@
   "homepage": "https://github.com/franmagneto/cadastro-casf#readme",
   "dependencies": {
     "knex": "^0.14.6",
-    "sqlite3": "^4.0.1"
+    "sqlite3": "^4.0.2"
   },
   "devDependencies": {
-    "electron": "^2.0.4",
-    "electron-rebuild": "^1.8.1"
+    "electron": "^2.0.6",
+    "electron-rebuild": "^1.8.2"
   }
 }
