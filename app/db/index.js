@@ -8,5 +8,6 @@ module.exports = async filename => {
       filename
     }
   })
-  return await schema(db)
+  await schema(db)
+  return db
 }
