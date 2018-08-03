@@ -1,10 +1,10 @@
-module.exports = async schema => {
-  if (await schema.hasTable('usuarios'))
-    schema.createTable('usuarios', t => {
+module.exports = async db => {
+  if (!await db.schema.hasTable('usuarios'))
+    await db.schema.createTable('usuarios', t => {
       t.string('nome')
     })
-  if (await schema.hasTable('acolhidos'))
-    schema.createTable('acolhidos', t => {
+  if (!await db.schema.hasTable('acolhidos'))
+    await db.schema.createTable('acolhidos', t => {
       t.string('nome')
       t.date('nascimento')
       t.string('mae')
@@ -25,8 +25,8 @@ module.exports = async schema => {
       t.dateTime('cadastrado_em')
       t.integer('usuario_id')
     })
-  if (await schema.hasTable('enderecos'))
-    schema.createTable('enderecos', t => {
+  if (!await db.schema.hasTable('enderecos'))
+    await db.schema.createTable('enderecos', t => {
       t.integer('acolhido_id')
       t.string('logradouro')
       t.string('numero')
@@ -35,43 +35,43 @@ module.exports = async schema => {
       t.string('cidade')
       t.string('uf')
     })
-  if (await schema.hasTable('telefones'))
-    schema.createTable('telefones', t => {
+  if (!await db.schema.hasTable('telefones'))
+    await db.schema.createTable('telefones', t => {
       t.integer('acolhido_id')
       t.string('ddd')
       t.string('numero')
       t.boolean('celular')
     })
-  if (await schema.hasTable('saude'))
-    schema.createTable('saude', t => {
+  if (!await db.schema.hasTable('saude'))
+    await db.schema.createTable('saude', t => {
       t.integer('acolhido_id')
       t.string('sus')
       t.integer('ultima_consulta_ha')
       t.boolean('convulsoes')
     })
-  if (await schema.hasTable('medicamentos'))
-    schema.createTable('medicamentos', t => {
+  if (!await db.schema.hasTable('medicamentos'))
+    await db.schema.createTable('medicamentos', t => {
       t.integer('saude_id')
       t.string('nome')
     })
-  if (await schema.hasTable('vicios'))
-    schema.createTable('vicios', t => {
+  if (!await db.schema.hasTable('vicios'))
+    await db.schema.createTable('vicios', t => {
       t.integer('acolhido_id')
       t.string('substancia')
     })
-  if (await schema.hasTable('policial'))
-    schema.createTable('policial', t => {
+  if (!await db.schema.hasTable('policial'))
+    await db.schema.createTable('policial', t => {
       t.integer('acolhido_id')
       t.integer('tempo_preso')
       t.string('artigo')
     })
-  if (await schema.hasTable('pertences'))
-    schema.createTable('pertences', t => {
+  if (!await db.schema.hasTable('pertences'))
+    await db.schema.createTable('pertences', t => {
       t.integer('acolhido_id')
       t.string('descricao')
     })
-  if (await schema.hasTable('servicos'))
-    schema.createTable('servicos', t => {
+  if (!await db.schema.hasTable('servicos'))
+    await db.schema.createTable('servicos', t => {
       t.integer('refeicoes')
       t.integer('banhos')
       t.integer('sabonetes')
