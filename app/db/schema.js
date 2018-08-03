@@ -76,5 +76,6 @@ module.exports = async db => {
       t.integer('banhos')
       t.integer('sabonetes')
       t.integer('barbeadores')
+      t.integer('cortes_de_cabelo')
     })
 }
