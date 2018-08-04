@@ -5,10 +5,13 @@
   },
   "extends": "eslint-config-airbnb",
   "rules": {
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": ["error", { "ignore": ["electron"] }],
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
-    "semi": ["error", "never"]
+    "semi": ["error", "never"],
+    "react/prefer-stateless-function": "off"
   }
 }
