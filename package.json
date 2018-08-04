@@ -1,5 +1,6 @@
 {
   "name": "cadastro-casf",
+  "productName": "cadastro-casf",
   "version": "1.0.0",
   "description": "Cadastro de acolhidos na Casa de Apoio São Francisco",
   "main": "src/index.js",
@@ -12,25 +13,13 @@
     "type": "git",
     "url": "git+https://github.com/franmagneto/cadastro-casf.git"
   },
+  "keywords": [],
   "author": "Francisco Machado Magalhães Neto",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/franmagneto/cadastro-casf/issues"
   },
   "homepage": "https://github.com/franmagneto/cadastro-casf#readme",
-  "dependencies": {
-    "electron-compile": "^6.4.3",
-    "electron-squirrel-startup": "^1.0.0",
-    "knex": "^0.14.6",
-    "sqlite3": "^4.0.2"
-  },
-  "devDependencies": {
-    "babel-plugin-transform-async-to-generator": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "electron-forge": "^5.2.2",
-    "electron-prebuilt-compile": "2.0.6"
-  },
   "config": {
     "forge": {
       "make_targets": {
@@ -62,5 +51,18 @@
         "name": "cadastrocasf"
       }
     }
+  },
+  "dependencies": {
+    "electron-compile": "^6.4.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "knex": "^0.14.6",
+    "sqlite3": "^4.0.2"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^5.2.2",
+    "electron-prebuilt-compile": "2.0.6"
   }
 }
