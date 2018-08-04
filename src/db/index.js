@@ -1,7 +1,7 @@
-const knex = require('knex')
-const schema = require('./schema')
+import knex from 'knex'
+import schema from './schema'
 
-module.exports = async filename => {
+export default async (filename) => {
   const db = knex({
     client: 'sqlite3',
     useNullAsDefault: true,

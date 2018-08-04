@@ -1,6 +1,4 @@
-module.exports = async db => {
-  if (!await db.schema.hasTable('usuarios'))
-    await db.schema.createTable('usuarios', t => {
+export default async (db) => {
       t.string('nome')
     })
   if (!await db.schema.hasTable('acolhidos'))
