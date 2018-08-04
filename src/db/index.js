@@ -5,7 +5,7 @@ export default async (filename) => {
   const db = knex({
     client: 'sqlite3',
     useNullAsDefault: true,
-    connection: { filename }
+    connection: { filename },
   })
   await schema(db)
   return db

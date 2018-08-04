@@ -1,13 +1,11 @@
 {
-  "parserOptions": {
-    "ecmaVersion": 8
-  },
   "env": {
     "browser": true,
     "node": true
   },
-  "extends": "eslint:recommended",
+  "extends": "eslint-config-airbnb",
   "rules": {
+    "import/no-unresolved": ["error", { "ignore": ["electron"] }],
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
