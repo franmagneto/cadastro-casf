@@ -5,7 +5,7 @@ let mainWindow = null
 function createWindow() {
   mainWindow = new BrowserWindow()
 
-  mainWindow.loadFile('app/index.html')
+  mainWindow.loadFile('src/index.html')
 
   mainWindow.on('closed', () => {
     mainWindow = null
