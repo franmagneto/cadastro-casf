@@ -72,6 +72,7 @@ module.exports = async db => {
     })
   if (!await db.schema.hasTable('servicos'))
     await db.schema.createTable('servicos', t => {
+      t.integer('acolhido_id')
       t.integer('refeicoes')
       t.integer('banhos')
       t.integer('sabonetes')
