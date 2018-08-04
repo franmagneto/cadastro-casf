@@ -4,9 +4,8 @@ const schema = require('./schema')
 module.exports = async filename => {
   const db = knex({
     client: 'sqlite3',
-    connection: {
-      filename
-    }
+    useNullAsDefault: true,
+    connection: { filename }
   })
   await schema(db)
   return db
