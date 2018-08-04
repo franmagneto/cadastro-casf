@@ -2,7 +2,7 @@
   "name": "cadastro-casf",
   "version": "1.0.0",
   "description": "Cadastro de acolhidos na Casa de Apoio São Francisco",
-  "main": "app/main.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
