@@ -9,7 +9,7 @@ const isDevMode = process.execPath.match(/[\\/]electron/)
 if (isDevMode) enableLiveReload({ strategy: 'react-hmr' })
 
 const createWindow = async () => {
-  mainWindow = new BrowserWindow()
+  mainWindow = new BrowserWindow({ show: false })
 
   mainWindow.loadFile('src/index.html')
 
@@ -17,6 +17,8 @@ const createWindow = async () => {
     await installExtension(REACT_DEVELOPER_TOOLS)
     mainWindow.webContents.openDevTools()
   }
+
+  mainWindow.once('ready-to-show', mainWindow.show)
 
   mainWindow.on('closed', () => {
     mainWindow = null
