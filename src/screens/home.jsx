@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
+import { Typography } from '@material-ui/core'
 
 export default class Home extends Component {
   render() {
     return (
       <div>
-        <h1>
+        <Typography variant="headline">
           Ficha de Acolhimento Permanente
-        </h1>
-        <h2>
+        </Typography>
+        <Typography variant="title">
           Casa de Apoio São Francisco Muzambinho/MG
-        </h2>
+        </Typography>
       </div>
     )
   }
