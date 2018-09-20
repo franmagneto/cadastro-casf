@@ -12,6 +12,7 @@
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
+    "react/jsx-filename-extension": "off",
     "react/prefer-stateless-function": "off"
   }
 }

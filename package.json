@@ -1,15 +1,14 @@
 {
   "name": "cadastro-casf",
-  "productName": "cadastro-casf",
+  "productName": "Casa de Apoio São Francisco - Cadastro de acolhidos",
   "version": "1.0.0",
   "description": "Cadastro de acolhidos na Casa de Apoio São Francisco",
   "main": "src/index.js",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "eslint --cache --color --ext .jsx,.js src"
+    "start": "electron-webpack dev",
+    "build": "electron-webpack",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "repository": {
     "type": "git",
@@ -22,60 +21,30 @@
     "url": "https://github.com/franmagneto/cadastro-casf/issues"
   },
   "homepage": "https://github.com/franmagneto/cadastro-casf#readme",
-  "config": {
-    "forge": {
-      "make_targets": {
-        "win32": [
-          "squirrel"
-        ],
-        "darwin": [
-          "zip"
-        ],
-        "linux": [
-          "deb",
-          "rpm"
-        ]
-      },
-      "electronPackagerConfig": {
-        "packageManager": "npm"
-      },
-      "electronWinstallerConfig": {
-        "name": "cadastro_casf"
-      },
-      "electronInstallerDebian": {},
-      "electronInstallerRedhat": {},
-      "github_repository": {
-        "owner": "",
-        "name": ""
-      },
-      "windowsStoreConfig": {
-        "packageName": "",
-        "name": "cadastrocasf"
-      }
-    }
+  "electronWebpack": {
+    "title": true
   },
   "dependencies": {
     "@material-ui/core": "^1.5.1",
-    "electron-compile": "^6.4.3",
-    "electron-devtools-installer": "^2.2.4",
-    "electron-squirrel-startup": "^1.0.0",
     "knex": "^0.15.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-hot-loader": "^4.3.8",
     "react-router-dom": "^4.3.1",
+    "source-map-support": "^0.5.9",
     "sqlite3": "^4.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
-    "electron-forge": "^5.2.2",
-    "electron-prebuilt-compile": "3.0.0",
-    "eslint": "^5.6.0",
+    "ajv": "^6.5.3",
+    "electron": "^3.0.0",
+    "electron-builder": "^20.28.4",
+    "electron-webpack": "^2.3.1",
+    "electron-webpack-eslint": "^3.0.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "webpack": "^4.19.1"
   }
 }
