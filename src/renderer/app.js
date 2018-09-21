@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import 'typeface-roboto/index.css'
 import Home from './screens/home'
 
 const render = () => {
