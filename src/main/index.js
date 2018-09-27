@@ -6,7 +6,7 @@ let mainWindow
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 function createMainWindow() {
-  const window = new BrowserWindow({ show: false })
+  const window = new BrowserWindow({ show: false, width: 960, height: 600 })
 
   if (isDevelopment) {
     window.loadURL(`http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`)
