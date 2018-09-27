@@ -36,6 +36,8 @@
     "typeface-roboto": "0.0.54"
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-constant-elements": "^7.0.0",
+    "@babel/plugin-transform-react-inline-elements": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "ajv": "^6.5.3",
     "electron": "^3.0.0",
