@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, Menu } from 'electron'
 
 let mainWindow
 
@@ -29,6 +29,7 @@ function createMainWindow() {
 
 app.on('ready', () => {
   mainWindow = createMainWindow()
+  Menu.setApplicationMenu(null)
 })
 
 app.on('window-all-closed', () => {
