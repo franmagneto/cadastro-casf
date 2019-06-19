@@ -5,10 +5,10 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <Typography variant="headline">
+        <Typography variant="h5">
           Ficha de Acolhimento Permanente
         </Typography>
-        <Typography variant="title">
+        <Typography variant="h6">
           Casa de Apoio São Francisco Muzambinho/MG
         </Typography>
       </div>

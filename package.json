@@ -3,12 +3,13 @@
   "productName": "Casa de Apoio São Francisco - Cadastro de acolhidos",
   "version": "1.0.0",
   "description": "Cadastro de acolhidos na Casa de Apoio São Francisco",
-  "main": "src/index.js",
+  "main": ".webpack/main",
   "scripts": {
-    "start": "electron-webpack dev",
-    "build": "electron-webpack",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -21,35 +22,86 @@
     "url": "https://github.com/franmagneto/cadastro-casf/issues"
   },
   "homepage": "https://github.com/franmagneto/cadastro-casf#readme",
-  "electronWebpack": {
-    "title": true
-  },
-  "build": {
-    "npmRebuild": false
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "cadastro_casf"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ],
+      "plugins": [
+        [
+          "@electron-forge/plugin-webpack",
+          {
+            "mainConfig": "./webpack.main.config.js",
+            "renderer": {
+              "config": "./webpack.renderer.config.js",
+              "entryPoints": [
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/renderer.js",
+                  "name": "main_window"
+                }
+              ]
+            }
+          }
+        ]
+      ]
+    }
   },
   "dependencies": {
-    "@material-ui/core": "^3.8.3",
-    "knex": "^0.15.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-hot-loader": "^4.6.3",
-    "react-router-dom": "^4.3.1",
-    "source-map-support": "^0.5.10",
-    "sqlite3": "^4.0.6",
+    "@hot-loader/react-dom": "^16.8.6",
+    "@material-ui/core": "^4.1.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "knex": "^0.17.6",
+    "react": "^16.8.6",
+    "react-hot-loader": "^4.11.1",
+    "react-router-dom": "^5.0.1",
+    "sqlite3": "^4.0.9",
     "typeface-roboto": "0.0.54"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
     "@babel/plugin-transform-react-constant-elements": "^7.2.0",
     "@babel/plugin-transform-react-inline-elements": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
-    "electron": "^4.0.1",
-    "electron-builder": "^20.38.4",
-    "electron-webpack": "^2.6.1",
-    "electron-webpack-eslint": "^4.0.0",
+    "@electron-forge/cli": "^6.0.0-beta.39",
+    "@electron-forge/maker-deb": "^6.0.0-beta.39",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.39",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.39",
+    "@electron-forge/maker-zip": "^6.0.0-beta.39",
+    "@electron-forge/plugin-webpack": "^6.0.0-beta.39",
+    "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "electron": "5.0.4",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.12.3",
-    "webpack": "^4.28.4"
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "file-loader": "^4.0.0",
+    "node-loader": "^0.6.0",
+    "style-loader": "^0.23.1"
   }
 }
