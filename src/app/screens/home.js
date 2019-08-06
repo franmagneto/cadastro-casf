@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Typography } from '@material-ui/core'
+import React, { Component } from 'react';
+import { Typography } from '@material-ui/core';
 
 export default class Home extends Component {
   render() {
@@ -12,6 +12,6 @@ export default class Home extends Component {
           Casa de Apoio São Francisco Muzambinho/MG
         </Typography>
       </div>
-    )
+    );
   }
 }
