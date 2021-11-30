@@ -1,6 +1,6 @@
 {
   "name": "cadastro-casf",
-  "productName": "Casa de Apoio São Francisco - Cadastro de acolhidos",
+  "productName": "cadastro-casf",
   "version": "1.0.0",
   "description": "Cadastro de acolhidos na Casa de Apoio São Francisco",
   "main": ".webpack/main",
@@ -9,14 +9,17 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "eslint ."
+    "lint": "eslint --ext .ts,.tsx ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/franmagneto/cadastro-casf.git"
   },
   "keywords": [],
-  "author": "Francisco Machado Magalhães Neto",
+  "author": {
+    "name": "Francisco Neto",
+    "email": "franmagneto@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/franmagneto/cadastro-casf/issues"
@@ -57,7 +60,7 @@
               "entryPoints": [
                 {
                   "html": "./src/index.html",
-                  "js": "./src/renderer.js",
+                  "js": "./src/renderer.ts",
                   "name": "main_window"
                 }
               ]
@@ -67,41 +70,39 @@
       ]
     }
   },
-  "dependencies": {
-    "@hot-loader/react-dom": "^16.11.0",
-    "@material-ui/core": "^4.7.2",
-    "electron-squirrel-startup": "^1.0.0",
-    "knex": "^0.19.5",
-    "react": "^16.12.0",
-    "react-hot-loader": "^4.12.18",
-    "react-router-dom": "^5.1.2",
-    "sqlite3": "^4.1.1",
-    "typeface-roboto": "0.0.54"
-  },
   "devDependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/plugin-transform-react-constant-elements": "^7.7.4",
-    "@babel/plugin-transform-react-inline-elements": "^7.7.4",
-    "@babel/preset-env": "^7.7.5",
-    "@babel/preset-react": "^7.7.4",
-    "@electron-forge/cli": "^6.0.0-beta.46",
-    "@electron-forge/maker-deb": "^6.0.0-beta.46",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.46",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.46",
-    "@electron-forge/maker-zip": "^6.0.0-beta.46",
-    "@electron-forge/plugin-webpack": "^6.0.0-beta.46",
-    "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.1",
-    "electron": "9.4.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-loader": "^2.2.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.17.0",
-    "file-loader": "^4.3.0",
-    "node-loader": "^0.6.0",
-    "style-loader": "^0.23.1"
+    "@electron-forge/cli": "^6.0.0-beta.61",
+    "@electron-forge/maker-deb": "^6.0.0-beta.61",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.61",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
+    "@electron-forge/maker-zip": "^6.0.0-beta.61",
+    "@electron-forge/plugin-webpack": "^6.0.0-beta.61",
+    "@tsconfig/recommended": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "@vercel/webpack-asset-relocator-loader": "^1.7.0",
+    "css-loader": "^6.5.1",
+    "electron": "16.0.2",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.25.3",
+    "fork-ts-checker-webpack-plugin": "^6.5.0",
+    "node-loader": "^2.0.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "@fontsource/roboto": "^4.5.1",
+    "@mui/material": "^5.2.2",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "electron-squirrel-startup": "^1.0.0",
+    "knex": "^0.95.14",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2",
+    "sqlite3": "^5.0.2"
   }
 }

@@ -1,7 +1,7 @@
-import knex from 'knex';
+import knex, { Knex } from 'knex';
 import schema from './schema';
 
-export default async (filename) => {
+async function db(filename: string): Promise<Knex> {
   const db = knex({
     client: 'sqlite3',
     useNullAsDefault: true,
@@ -9,4 +9,6 @@ export default async (filename) => {
   });
   await schema(db);
   return db;
-};
+}
+
+export default db;

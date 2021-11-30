@@ -1,4 +1,6 @@
-export default async (db) => {
+import { Knex } from "knex";
+
+async function schema(db: Knex): Promise<void> {
   if (!await db.schema.hasTable('usuarios')) {
     await db.schema.createTable('usuarios', (t) => {
       t.string('nome');
@@ -89,4 +91,6 @@ export default async (db) => {
       t.integer('cortes_de_cabelo');
     });
   }
-};
+}
+
+export default schema;

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
-export default function Home() {
+function Home(): JSX.Element {
   return (
     <div>
       <Typography variant="h5">
@@ -13,3 +13,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
