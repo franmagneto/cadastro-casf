@@ -8,6 +8,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "jsx": "react",
+    "allowSyntheticDefaultImports": false,
     "paths": {
       "*": ["node_modules/*"]
     }
