@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { Typography } from '@mui/material';
+import { Heading, VStack } from '@chakra-ui/react';
 
 function Home(): JSX.Element {
   return (
-    <div>
-      <Typography variant="h5">
+    <VStack>
+      <Heading as='h1' fontSize='2xl'>
         Ficha de Acolhimento Permanente
-      </Typography>
-      <Typography variant="h6">
+      </Heading>
+      <Heading as='h2' fontSize='xl'>
         Casa de Apoio São Francisco Muzambinho/MG
-      </Typography>
-    </div>
+      </Heading>
+    </VStack>
   );
 }
 

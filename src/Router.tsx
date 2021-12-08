@@ -6,7 +6,7 @@ function Router(): JSX.Element {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path='/' element={<Home />} />
       </Routes>
     </HashRouter>
   );
